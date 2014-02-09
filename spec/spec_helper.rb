@@ -39,4 +39,10 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # According to the Rails tutorial, the following line is necessary to get
+  # the static_pages tests to run properly.  The new, preferred, technique
+  # is evidently to use feature specs:
+  # (https://www.relishapp.com/rspec/rspec-rails/docs/feature-specs/feature-spec)
+  config.include Capybara::DSL
 end
